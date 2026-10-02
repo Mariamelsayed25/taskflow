@@ -1,0 +1,698 @@
+{
+  "info": {
+    "_postman_id": "14a04f89-32f4-4dd7-820b-4e10628febff",
+    "name": "taskflow",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56828098",
+    "_collection_link": "https://go.postman.co/collection/56828098-14a04f89-32f4-4dd7-820b-4e10628febff?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create  newboard",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"xxxx\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/boards",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "boards"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"xxxx\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/boards",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "boards"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "276"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"114-N1YS1iSz0O9DMsI4Dgbj1Qskalo\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 02 Oct 2026 19:20:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Board created\",\n    \"data\": {\n        \"title\": \"xxxx\",\n        \"description\": \"\",\n        \"owner\": \"6ac0000492ed55accdf2cd17\",\n        \"members\": [\n            \"6ac0000492ed55accdf2cd17\"\n        ],\n        \"_id\": \"6ac0041849cd9f8a2a4ead0d\",\n        \"createdAt\": \"2026-10-02T19:20:56.986Z\",\n        \"updatedAt\": \"2026-10-02T19:20:56.986Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{json_web_token_111k}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/boards",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "boards"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/boards",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "boards"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1475"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"5c3-CWgklS0ilBygfAbHztUrC0+SKGQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 02 Oct 2026 19:19:58 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": [\n        {\n            \"_id\": \"6ac0000592ed55accdf2cdc9\",\n            \"title\": \"Marketing Campaign\",\n            \"description\": \"Planning and executing the upcoming digital marketing campaign.\",\n            \"owner\": {\n                \"_id\": \"6ac0000492ed55accdf2cd17\",\n                \"username\": \"Demo Admin\"\n            },\n            \"members\": [\n                \"6ac0000492ed55accdf2cd17\",\n                \"6ac0000492ed55accdf2cd19\",\n                \"6ac0000492ed55accdf2cd1d\",\n                \"6ac0000492ed55accdf2cd21\"\n            ],\n            \"createdAt\": \"2026-10-02T19:03:33.079Z\",\n            \"updatedAt\": \"2026-10-02T19:03:33.079Z\",\n            \"__v\": 0,\n            \"listCount\": 5,\n            \"taskCount\": 8\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2cd79\",\n            \"title\": \"Mobile App Development\",\n            \"description\": \"Development and release of the new mobile application.\",\n            \"owner\": {\n                \"_id\": \"6ac0000492ed55accdf2cd17\",\n                \"username\": \"Demo Admin\"\n            },\n            \"members\": [\n                \"6ac0000492ed55accdf2cd17\",\n                \"6ac0000492ed55accdf2cd19\",\n                \"6ac0000492ed55accdf2cd1b\",\n                \"6ac0000492ed55accdf2cd1d\",\n                \"6ac0000492ed55accdf2cd21\",\n                \"6ac0000492ed55accdf2cd1f\"\n            ],\n            \"createdAt\": \"2026-10-02T19:03:33.036Z\",\n            \"updatedAt\": \"2026-10-02T19:03:33.036Z\",\n            \"__v\": 0,\n            \"listCount\": 5,\n            \"taskCount\": 9\n        },\n        {\n            \"_id\": \"6ac0000492ed55accdf2cd23\",\n            \"title\": \"Website Redesign\",\n            \"description\": \"Redesign the company website and improve the user experience.\",\n            \"owner\": {\n                \"_id\": \"6ac0000492ed55accdf2cd17\",\n                \"username\": \"Demo Admin\"\n            },\n            \"members\": [\n                \"6ac0000492ed55accdf2cd17\",\n                \"6ac0000492ed55accdf2cd19\",\n                \"6ac0000492ed55accdf2cd1b\",\n                \"6ac0000492ed55accdf2cd1d\",\n                \"6ac0000492ed55accdf2cd21\",\n                \"6ac0000492ed55accdf2cd1f\"\n            ],\n            \"createdAt\": \"2026-10-02T19:03:32.982Z\",\n            \"updatedAt\": \"2026-10-02T19:03:32.982Z\",\n            \"__v\": 0,\n            \"listCount\": 5,\n            \"taskCount\": 10\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"demo@taskflow.com\",\r\n  \"password\": \"12345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update title",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"To Do\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/boards/6ac0041849cd9f8a2a4ead0d/lists",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "boards",
+            "6ac0041849cd9f8a2a4ead0d",
+            "lists"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "update title",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"To Do\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/boards/6ac0041849cd9f8a2a4ead0d/lists",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "boards",
+                "6ac0041849cd9f8a2a4ead0d",
+                "lists"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "233"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e9-5muaeP5XCyQPtPShMq8x981AgTE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 02 Oct 2026 20:21:58 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"List created\",\n    \"data\": {\n        \"title\": \"To Do\",\n        \"board\": \"6ac0041849cd9f8a2a4ead0d\",\n        \"position\": 0,\n        \"_id\": \"6ac0126649cd9f8a2a4ead37\",\n        \"createdAt\": \"2026-10-02T20:21:58.395Z\",\n        \"updatedAt\": \"2026-10-02T20:21:58.395Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "create task",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"T\",\r\n  \"priority\": \"high\",\r\n  \"dueDate\": \"2026-12-01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/lists/6ac0126649cd9f8a2a4ead37/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "lists",
+            "6ac0126649cd9f8a2a4ead37",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update task",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/6ac012b949cd9f8a2a4ead3c/assign",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "6ac012b949cd9f8a2a4ead3c",
+            "assign"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "update task",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/tasks/6ac012b949cd9f8a2a4ead3c/assign",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks",
+                "6ac012b949cd9f8a2a4ead3c",
+                "assign"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "438"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1b6-JDtf9BFSgkw3tj5r0o+tVhk6S90\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 02 Oct 2026 20:24:02 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Task assigned\",\n    \"data\": {\n        \"_id\": \"6ac012b949cd9f8a2a4ead3c\",\n        \"title\": \"T\",\n        \"description\": \"\",\n        \"list\": \"6ac0126649cd9f8a2a4ead37\",\n        \"board\": \"6ac0041849cd9f8a2a4ead0d\",\n        \"status\": \"todo\",\n        \"priority\": \"high\",\n        \"dueDate\": \"2026-12-01T00:00:00.000Z\",\n        \"createdBy\": {\n            \"_id\": \"6ac0000492ed55accdf2cd17\",\n            \"username\": \"Demo Admin\",\n            \"email\": \"demo@taskflow.com\"\n        },\n        \"createdAt\": \"2026-10-02T20:23:21.737Z\",\n        \"updatedAt\": \"2026-10-02T20:23:21.737Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "check task",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks?status=done",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "done"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/tasks?status=done",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "done"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "3896"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"f38-tmgCiOWrYt43fJyFYCZ0YdLOPE8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 02 Oct 2026 20:25:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": [\n        {\n            \"_id\": \"6ac0000592ed55accdf2cd71\",\n            \"title\": \"Finalize homepage design\",\n            \"description\": \"Final visual design handed over to development\",\n            \"list\": \"6ac0000492ed55accdf2cd2f\",\n            \"board\": \"6ac0000492ed55accdf2cd23\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"medium\",\n            \"dueDate\": \"2026-09-27T19:03:33.032Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-16T19:03:33.032Z\",\n            \"updatedAt\": \"2026-09-16T19:03:33.032Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2cdc1\",\n            \"title\": \"Set up CI pipeline\",\n            \"description\": \"Automated build and tests on every push\",\n            \"list\": \"6ac0000592ed55accdf2cd85\",\n            \"board\": \"6ac0000592ed55accdf2cd79\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd1b\",\n                \"username\": \"Omar Hassan\",\n                \"email\": \"omar@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"medium\",\n            \"dueDate\": \"2026-09-17T19:03:33.074Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-15T19:03:33.074Z\",\n            \"updatedAt\": \"2026-09-15T19:03:33.074Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2cd69\",\n            \"title\": \"Create homepage wireframe\",\n            \"description\": \"Low-fidelity wireframe approved by stakeholders\",\n            \"list\": \"6ac0000492ed55accdf2cd2f\",\n            \"board\": \"6ac0000492ed55accdf2cd23\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd1d\",\n                \"username\": \"Nour Ali\",\n                \"email\": \"nour@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"high\",\n            \"dueDate\": \"2026-09-20T19:03:33.028Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-15T19:03:33.028Z\",\n            \"updatedAt\": \"2026-09-15T19:03:33.028Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2ce09\",\n            \"title\": \"Competitor analysis report\",\n            \"description\": \"Summary of competitor campaigns\",\n            \"list\": \"6ac0000592ed55accdf2cdd5\",\n            \"board\": \"6ac0000592ed55accdf2cdc9\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"medium\",\n            \"dueDate\": \"2026-09-23T19:03:33.113Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-14T19:03:33.113Z\",\n            \"updatedAt\": \"2026-09-14T19:03:33.113Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2cdb9\",\n            \"title\": \"Create authentication flow\",\n            \"description\": \"Screens and navigation for sign-in\",\n            \"list\": \"6ac0000592ed55accdf2cd85\",\n            \"board\": \"6ac0000592ed55accdf2cd79\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd1b\",\n                \"username\": \"Omar Hassan\",\n                \"email\": \"omar@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"high\",\n            \"dueDate\": \"2026-09-22T19:03:33.069Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-14T19:03:33.069Z\",\n            \"updatedAt\": \"2026-09-14T19:03:33.069Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2cd61\",\n            \"title\": \"Analyze current website UX\",\n            \"description\": \"Heatmaps and user interviews summary\",\n            \"list\": \"6ac0000492ed55accdf2cd2f\",\n            \"board\": \"6ac0000492ed55accdf2cd23\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd1d\",\n                \"username\": \"Nour Ali\",\n                \"email\": \"nour@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"high\",\n            \"dueDate\": \"2026-09-12T19:03:33.024Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-14T19:03:33.024Z\",\n            \"updatedAt\": \"2026-09-14T19:03:33.024Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6ac0000592ed55accdf2ce01\",\n            \"title\": \"Define campaign audience\",\n            \"description\": \"Personas and target segments\",\n            \"list\": \"6ac0000592ed55accdf2cdd5\",\n            \"board\": \"6ac0000592ed55accdf2cdc9\",\n            \"assignedTo\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"status\": \"done\",\n            \"priority\": \"high\",\n            \"dueDate\": \"2026-09-14T19:03:33.109Z\",\n            \"createdBy\": {\n                \"_id\": \"6ac0000492ed55accdf2cd19\",\n                \"username\": \"Sarah Ahmed\",\n                \"email\": \"sarah@example.com\"\n            },\n            \"createdAt\": \"2026-09-13T19:03:33.109Z\",\n            \"updatedAt\": \"2026-09-13T19:03:33.109Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "add comment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"text\": \"Hi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/6ac012b949cd9f8a2a4ead3c/comments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "tasks",
+            "6ac012b949cd9f8a2a4ead3c",
+            "comments"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"text\": \"Hi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/tasks/6ac012b949cd9f8a2a4ead3c/comments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "tasks",
+                "6ac012b949cd9f8a2a4ead3c",
+                "comments"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "282"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"11a-kZzK4QQW/Eyks1YO8mlruA42uSI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 02 Oct 2026 20:25:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Comment added\",\n    \"data\": {\n        \"task\": \"6ac012b949cd9f8a2a4ead3c\",\n        \"user\": {\n            \"_id\": \"6ac0000492ed55accdf2cd17\",\n            \"username\": \"Demo Admin\"\n        },\n        \"text\": \"Hi\",\n        \"_id\": \"6ac0134d49cd9f8a2a4ead52\",\n        \"createdAt\": \"2026-10-02T20:25:49.658Z\",\n        \"updatedAt\": \"2026-10-02T20:25:49.658Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{json_web_token_111k}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_111k",
+      "secret": true
+    }
+  ]
+}
